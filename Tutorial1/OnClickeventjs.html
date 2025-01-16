@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> test </title>
+    </head>
+
+    <body>
+        <h1> Amazon</h1>
+
+        <button onclick="
+        console.log('Das befindet sich aktuell drinne: ' + KarteVoll);
+        "> show quantity </button>
+
+
+
+        <button onclick="
+        KarteVoll = KarteVoll + 1;
+        console.log(' Einer wurde hinzugefügt: ' + KarteVoll);
+        ">Add</button>
+
+
+        <button onclick="
+        KarteVoll = KarteVoll + 2
+        console.log('2 Stück wurden hinzugefügt: ' + KarteVoll);
+        "> +2 </button>
+
+        <button onclick="
+        KarteVoll = KarteVoll + 3;
+        console.log('3 Stück wurden hinzugefügt: ' + KarteVoll);
+        "> +3 </button>
+
+
+        <button onclick="
+        KarteVoll = 0;
+        console.log('Alls entfernt, aktueller Stand: ' + KarteVoll);
+        "> Reset </button>
+
+
+        <script>
+            let KarteVoll = 0
+        </script>
+
+
+
+
+    </body>
+</html>
