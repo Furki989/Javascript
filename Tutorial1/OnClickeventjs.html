@@ -8,19 +8,20 @@
         <h1> Amazon</h1>
 
         <button onclick="
+        console.log(nachricht);
         console.log('Das befindet sich aktuell drinne: ' + KarteVoll);
         "> show quantity </button>
 
 
 
         <button onclick="
-        KarteVoll = KarteVoll + 1;
+        KarteVoll = KarteVoll + 1;                                       // oder KarteVoll++; oder += 1;
         console.log(' Einer wurde hinzugefügt: ' + KarteVoll);
         ">Add</button>
 
 
         <button onclick="
-        KarteVoll = KarteVoll + 2
+        KarteVoll += 2;
         console.log('2 Stück wurden hinzugefügt: ' + KarteVoll);
         "> +2 </button>
 
@@ -37,7 +38,10 @@
 
 
         <script>
-            let KarteVoll = 0
+            let KarteVoll = 0                  // let wenn man weiss das sich die variable in laufe des codes verändert bzw. verändert werden kann
+            const nachricht = 'Aua';
+
+            const nichtÄnderbar = 2;        // Const benutzt man wenn die variable fest bleiben soll unveränderbar
         </script>
 
 
