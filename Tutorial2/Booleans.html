@@ -48,12 +48,68 @@
         "> Schere </button>
 
 
-        <button> Stein </button>
+        <button onclick="
+
+         randomNumber = Math.random();
+
+        if (randomNumber >= 0 && randomNumber < 1/3) {
+            computerMove = 'Stein';
+
+        } else if (randomNumber >= 1/3 && randomNumber < 2/3){
+            computerMove = 'Papier';
+
+        } else if (randomNumber >= 2/3 && randomNumber < 1) {
+            computerMove = 'Schere';
+
+        }
+
+        if(computerMove === 'Stein') {
+            result = 'Unentschieden';
+
+        } else if (computerMove === 'Schere') {
+            result = 'Sieg';
+
+        } else if (computerMove === 'Papier') {
+            result = 'Niederlage';
+
+        } else {
+            result = 'error';
+        }
+
+        alert('Der Computer hat ' +  computerMove + ' gewählt. Das Spiel ist als ' + result + ' gewertet.');
+        
+        "> Stein </button>
 
 
-        <button> Papier </button>
+        <button onclick="
+        
+        randomNumber = Math.random();
 
-     
+        if (randomNumber >= 0 && randomNumber < 1/3) {
+            computerMove = 'Stein';
+
+        } else if (randomNumber >= 1/3 && randomNumber < 2/3){
+            computerMove = 'Papier';
+
+        } else if (randomNumber >= 2/3 && randomNumber < 1) {
+            computerMove = 'Schere';
+
+        }
+
+        if(computerMove === 'Stein') {
+            result = 'Sieg';
+
+        } else if (computerMove === 'Schere') {
+            result = 'Niederlage';
+
+        } else if (computerMove === 'Papier') {
+            result = 'Unentschieden';
+
+        } else {
+            result = 'error';
+        }
+
+        alert('Der Computer hat ' +  computerMove + ' gewählt. Das Spiel ist als ' + result + ' gewertet.');"> Papier </button>
 
         <script>
       
