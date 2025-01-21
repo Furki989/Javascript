@@ -1,14 +1,61 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title> test </title>
+        <title> Schere Stein Papier</title>
     </head>
     <body>
+
+        <p> Schere Stein Papier</p>
+
+
+        <button onclick="
+
+        const randomNumber = Math.random();      /* generiert zahl zwischen 0 -1 */
+
+        let computerMove = '';                  /* muss anfang erstellt werden, innerhalb der geschweiften klammern kann man nicht von außerhalb auf die werte zugreifen*/ 
+
+        if (randomNumber >= 0 && randomNumber < 1/3 ) {
+            computerMove = 'Stein';
+
+        } else if (randomNumber >= 1/3 && randomNumber < 2/3) {
+            computerMove = 'Papier';
+
+        } else {
+             computerMove = 'Schere';     /*   interessant && und operator, || Oder operator, !wert gegenteil   */
+        }
+
+        console.log(computerMove);
+
+
+        let result = '';
+
+        if(computerMove === 'Stein') {
+            result = 'Niederlage';
+
+        } else if (computerMove === 'Schere') {
+            result = 'Unentschieden';
+
+        } else if (computerMove === 'Papier') {
+            result = 'Sieg';
+
+        } else {
+            result = 'error';
+        }
+
+        alert('Der Computer hat ' +  computerMove + ' gewählt. Das Spiel ist als ' + result + ' gewertet.');
+
+
+        "> Schere </button>
+
+
+        <button> Stein </button>
+
+
+        <button> Papier </button>
+
      
 
         <script>
-
-            
       
         </script>
     </body>
