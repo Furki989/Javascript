@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Schere Stein Papier</title>
+    </head>
+    <body>
+
+        <p> Schere Stein Papier</p>
+
+        <button onclick="
+
+        // const computerMove = pickComputermove();   kein Zugriff von außerhalb der Funktion um an den Wert computerMove zukommen, durch den return der Function, kann man eine Variable erstellen, mitselben Namen und so weiter nutzen, man kann auch ein global variable nutzen ausser halb der function die variable 
+        playGame('Schere');
+
+
+        "> Schere </button>
+
+
+        <button onclick="
+
+         playGame('Stein');
+
+
+        "> Stein </button>
+
+
+        <button onclick="
+        
+    
+        playGame('Papier');
+
+
+        ">
+        
+        Papier </button>
+
+
+        <script>
+
+            function playGame(playerChoose) {
+
+            const computerMove = pickComputermove();
+
+            let result = '';
+
+
+            if(playerChoose === 'Papier') {
+
+                if(computerMove === 'Stein') {
+                    result = 'Sieg';
+
+                } else if (computerMove === 'Schere') {
+                    result = 'Niederlage';
+
+                } else if (computerMove === 'Papier') {
+                    result = 'Unentschieden';
+                } 
+                else{
+
+                    result='error';
+                }
+            }
+
+            else if(playerChoose === 'Stein') {
+
+                if(computerMove === 'Stein') {
+                result = 'Unentschieden';
+
+                } else if (computerMove === 'Schere') {
+                    result = 'Sieg';
+
+                } else if (computerMove === 'Papier') {
+                    result = 'Niederlage';
+
+                } else {
+                    result = 'error';
+                }
+
+            } else if (playerChoose === 'Schere') {
+
+                if(computerMove === 'Stein') {
+                result = 'Niederlage';
+
+                } else if (computerMove === 'Schere') {
+                    result = 'Unentschieden';
+
+                } else if (computerMove === 'Papier') {
+                    result = 'Sieg';
+
+                } else {
+                    result = 'error';
+                }
+
+            } else{
+
+                console.log(ERROR);
+            }
+
+
+            alert(' Du hast ' + playerChoose + ' Der Computer hat ' +  computerMove + ' gewählt. Das Spiel ist als ' + result + ' gewertet.');
+
+            }
+
+            function pickComputermove() {
+
+                const randomNumber = Math.random();     
+
+                let computerMove = '';                  
+
+                if (randomNumber >= 0 && randomNumber < 1/3 ) {
+                computerMove = 'Stein';
+
+                } else if (randomNumber >= 1/3 && randomNumber < 2/3) {
+                computerMove = 'Papier';
+
+                } else {
+                 computerMove = 'Schere';    
+                }
+
+                return computerMove;         // return kann ein output geben in der function, gets a value out of a function, return 'Hallo'; oder eine variable, mit console.log(FuctionName()); kann man in der Konsole das sehen, außerdem nach return geht die function nicht weiter. alles was man danach schreibt wird nicht durchgeführt 
+
+
+
+            }
+      
+        </script>
+    </body>
+</html>
