@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Objects</title>
+    </head>
+    <body>
+
+        <script>
+
+            let product = {
+                name: 'kaka',
+                price: 1000,
+                währung: '€',
+                rating: {
+                    stars: 4.5,
+                    count: 87
+                },
+
+                fun: function function1() {
+                    console.log('Funny');
+                }
+
+
+            };
+
+            console.log(product.price);             // Ausgabe eines bestimmten attributes aus dem Object
+            
+            product.price = 2000;                    // ein Attribute ändern
+            console.log(product.price);
+
+            product.neueAttribute = 'lol';          // Ein Attribute dem Objekt hinzufügen 
+            console.log(product.neueAttribute);
+
+            delete product.neueAttribute;           // löschen eines Attributes aus dem Object
+            console.log(product);
+
+
+            const product2 = {
+                name: 'shirt',
+                ['dilevery-time']: '1 day'
+            };
+            
+            console.log(product2.name);
+            console.log(product2['dilevery-time']);              //macht das selbe nur variablen mit - werden so angenommmen beim anderen wird es als subtrahiert gewertet 
+           console.log([product2.name]);
+           console.log(product2['name']);
+           console.log(product.rating.stars);                      // In Objekten kann man weiter Objekte erstellen 
+           product.fun();                                   // auch funktionen kann man in Objekten erstellen sind ja auch nur variablen
+
+                                                            // OBJECT + FUNCTION = METHODE, console.log, console. ist ein Object und .log ist eine Function die im objekt gesichert ist 
+      
+        </script>
+    </body>
+</html>
