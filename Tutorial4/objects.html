@@ -48,7 +48,23 @@
            product.fun();                                   // auch funktionen kann man in Objekten erstellen sind ja auch nur variablen
 
                                                             // OBJECT + FUNCTION = METHODE, console.log, console. ist ein Object und .log ist eine Function die im objekt gesichert ist 
+
+
+         JSON.stringify(product2);           //ist ein String     //auch für dantenbanken gut          // Konvertiert javascript Obejekte in JSON Objekte, austausch zwischen 2 verschiedenen Programmiersprachen, die Syntax ist simpel und kann in den meisten sprachen gelesen werden
+         
+         const jSONtoJS = JSON.stringify(product2);
+         
+         
+         JSON.parse(jSONtoJS);           // konvertiert JSON zu JS Objekt         man kann objecte mit json in ein localstorage sichern, wird die website neu geladen bleiben die ergebnisse gespeichert 
       
+
+
+
+         localStorage.setItem('name', 'valueonlyString');                   // localStorage.setItem() fügt Daten hinzu, nur Strings sind möglich, zuerst der Name und dann das Value
+
+         console.log(localStorage.getItem('name'));                            //localStorage.getItem() kann man sich Daten ausgeben lassen mit dem namen dem man dafür gesetzt hat 
+
+
         </script>
     </body>
 </html>
