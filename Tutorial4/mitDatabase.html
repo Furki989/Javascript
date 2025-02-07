@@ -46,12 +46,25 @@
         <script>
 
 
-            let Score = {
+            let Score = JSON.parse(localStorage.getItem('Tabelle')) || {  // umwandeln mit parse von einem String zu einem Zahlen wert. kann jetzt ersetzt werden mit dem davorigen Objekt wo win lose tie war und auf 0 gesetzt wurde immer 
+                                                                            // mit || ist das gleiche wie unten, es wird geprüft ist ein truly wert da, dann wird das erste durchgeführt, merkt man das kein wert drinne ist und ein Falsy werd ist also null undefinded '' etc. dann wird das nachdem oder ausgeführt und die werte auf 0 gesetzt und den ein wert gegeben 
+                wins: 0,
+                lose: 0,
+                Tie: 0
+            };                      
 
-            win: 0,
-            lose: 0,
-            Tie: 0
-            };
+
+
+
+            /*
+            if(Score === null) {          // durch reset wird alles gelöscht, der Score wert wird auf null gesetzt weil keine daten nach der löschung mehr gespeichert sind, also muss man es am anfang standart werte geben
+                Score = {                  // if(!Score) { } das selbe gekürzt, ob score nicht true ist also ein falsy wert ist und null ist es 
+
+                   win: 0,
+                   lose: 0,
+                   Tie: 0
+                };
+            } */
 
             function playGame(playerChoose) {
 
@@ -153,6 +166,9 @@
                 } else if(parameter1 === 'Unentschieden') {
                     Score.Tie  += 1;
                 }
+
+
+                localStorage.setItem('Tabelle', JSON.stringify(Score));      // wird im localstorage unter dem namen als tabelle abgespeichert mit stringfy wird Score zu einem JSONString da local Stoarge nur Strings speichern kann
             
             }
 
@@ -160,6 +176,8 @@
                 Score.win = 0;
                 Score.lose = 0;
                 Score.Tie = 0;
+
+                localStorage.removeItem('Tabelle');       // löscht die Daten aus dem Storage die unter Tabelle gespeichert sind macht es zum wert null (falsy value is null undefiend '' etc. )
             }
       
         </script>

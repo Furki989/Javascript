@@ -50,7 +50,7 @@
                                                             // OBJECT + FUNCTION = METHODE, console.log, console. ist ein Object und .log ist eine Function die im objekt gesichert ist 
 
 
-         JSON.stringify(product2);           //ist ein String     //auch für dantenbanken gut          // Konvertiert javascript Obejekte in JSON Objekte, austausch zwischen 2 verschiedenen Programmiersprachen, die Syntax ist simpel und kann in den meisten sprachen gelesen werden
+         JSON.stringify(product2);           //ist ein String es können nur Strings in localstorage abgespeichert werden    //auch für dantenbanken gut          // Konvertiert javascript Obejekte in JSON Objekte, austausch zwischen 2 verschiedenen Programmiersprachen, die Syntax ist simpel und kann in den meisten sprachen gelesen werden
          
          const jSONtoJS = JSON.stringify(product2);
          
@@ -62,7 +62,58 @@
 
          localStorage.setItem('name', 'valueonlyString');                   // localStorage.setItem() fügt Daten hinzu, nur Strings sind möglich, zuerst der Name und dann das Value
 
+         localStorage.getItem('name');    // bei const var let sind nur temporäre Variablen, die veschwinden wenn man die seite neu lädt, bei localstorage bleiben die variablen immer gespeicehrt
+
          console.log(localStorage.getItem('name'));                            //localStorage.getItem() kann man sich Daten ausgeben lassen mit dem namen dem man dafür gesetzt hat 
+
+
+         let test = 'popoo';
+
+         console.log(test.length);                      // gibt die anzahl der buchstaben in der console zurück
+         console.log('kaki'.length);
+         console.log('kaki'.toUpperCase());
+
+
+
+         const Object1 = {
+
+            message: ' hello'
+         };
+
+         const Object2 = Object1;                   // Objekt namen sind nur referencen, man kann die als const speichern und weiterhin die Daten innerhalb ändern, sie dienen nur zum einfacher finden
+
+         console.log( Object1 === Object2);         // das ergibt true weil die beiden objekte die selbe reference haben, sie führen beide zu dem selben speicher ort
+
+         const Object3 = {
+
+            message: ' hello'
+            };
+
+        console.log( Object1 === Object3);              // ist false weil zwar beide die gleichen daten haben aber nicht zum selben speicher ort führen
+
+
+        const object4 = {
+            message: 'mofagga',
+            price: 799,
+           // method: function function1() {
+            //    console.log('method');
+           // }
+            method() {
+                console.log('method');              //shortcut methode in object das gleiche wie oben
+            }
+
+        };
+
+        const { message } = object4;            // shortcut um den string aus dem object4 direkt in eine variable zu verwandeln es nimmt message aus object4 und speichert es in einer variable mit den namen message
+
+        console.log(message);       
+        object4.method();
+
+
+        
+        
+
+
 
 
         </script>
