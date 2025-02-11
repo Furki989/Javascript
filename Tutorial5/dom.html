@@ -5,8 +5,9 @@
     </head>
     <body>
 
-        <button> hello </button>
-
+        <button> hello0 </button>
+        <button class ="js-button"> hello </button>
+        
         <script>
             console.log(document.title);    // hier noch dom 
 
@@ -19,7 +20,23 @@
             
             console.log(document.body.innerHTML);  // gibt den Body der seite in der console aus 
 
-            document.body.innerHTML = '<button> Nice </button>'; // man kann auch html code ersetzen lassen, alles was im body ist 
+           // document.body.innerHTML = '<button> Nice </button>'; // man kann auch html code ersetzen lassen, alles was im body ist 
+
+            document.querySelector('button');   // wir können damit jedes html element aus der Seite nehmen, dass wird dann in js object umformatiert, in dem fall durch Button wird der erste Button aus der Seite genommen
+            
+            console.log(document.querySelector('button').innerHTML);   // InnerHTML gibt aus was innerhalb des HTML Tags steht, in dem Fall Nice 
+
+            document.querySelector('button').innerHTML = 'Pupu';  // hat geändert was innerhalb des tags ist 
+
+            console.log(document.querySelector('.js-button'));
+
+            const buttonElement = document.querySelector('.js-button');     // man kann diese auch als variable abspeichern
+
+            console.log(buttonElement);
+
+
+
+
 
 
           
