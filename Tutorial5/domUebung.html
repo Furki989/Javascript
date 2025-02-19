@@ -10,17 +10,23 @@
         <p> Youtube Subscribe button</p>
         <button onclick="
 
-        const Sub = document.querySelector('.js-subscribe-button');
-
-        if(Sub.innerHTML === 'Subscribe') {
-            Sub.innerHTML = 'Subscribed';
-
-        } else {
-            Sub.innerHTML = 'Subscribe';
-        }
+        subscribe();
 
         " class="js-subscribe-button">Subscribe</button>
+
+
         <script>
+
+            function subscribe() {
+                const Sub = document.querySelector('.js-subscribe-button');
+
+                if(Sub.innerHTML === 'Subscribe') {                                            // .innerText statt .innerHTML = wenn leertasten im innerHTML sind wird es ignoriert bei .innerText 
+                    Sub.innerHTML = 'Subscribed';
+
+                } else {
+                    Sub.innerHTML = 'Subscribe';
+                }
+            }
            
           
 
