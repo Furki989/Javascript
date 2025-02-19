@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> DomUebung </title>
+    </head>
+    <body>
+
+
+
+        <p> Amazon shipping Calculator</p>
+        <p> Order under $40 = + $10 shipping.</p>
+        <p> Order over $40 = FREE shipping</p>
+
+
+        <input placeholder="eingeben" class="eingabe">
+        <button onclick="
+
+        rechnen();
+        
+        
+        " class="calculate">Calculate</button>
+
+        <p class="ausgabe"></p>
+
+
+        <script>
+            
+
+            function rechnen() {
+
+                let einga = document.querySelector('.eingabe');
+
+                let cost = Number(einga.value);                        // mit value kriegt man den input aus input typen von html // die values werden automatisch zu strings mit Number() wird es zu einer zahl und man kann diese addieren 
+
+
+                
+
+                if (cost < 40) {
+                    cost = cost + 10;
+                    console.log(cost);
+                } 
+
+                document.querySelector('.ausgabe').innerHTML = '$' + cost;
+
+                
+
+
+            }
+
+
+         
+        </script>
+    </body>
+</html>
