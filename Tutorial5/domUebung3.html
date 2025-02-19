@@ -12,7 +12,11 @@
         <p> Order over $40 = FREE shipping</p>
 
 
-        <input placeholder="eingeben" class="eingabe">
+        <input placeholder="eingeben" class="eingabe" onkeydown="
+        
+       enteristgleich();
+        
+        ">
         <button onclick="
 
         rechnen();
@@ -24,6 +28,16 @@
 
 
         <script>
+
+            function enteristgleich()  {
+
+                console.log(event.key);                         // event ist ein object was die tasten beinhaltet ort key etc. mit key sieht man die eingabe taste 
+
+                if(event.key === 'Enter') {
+                    rechnen()
+                }
+
+            }
             
 
             function rechnen() {
@@ -31,7 +45,7 @@
                 let einga = document.querySelector('.eingabe');
 
                 let cost = Number(einga.value);                        // mit value kriegt man den input aus input typen von html // die values werden automatisch zu strings mit Number() wird es zu einer zahl und man kann diese addieren 
-
+                    String(25);                                         // genau das selbe wie Number ändert eine Zahl in ein String
 
                 
 
