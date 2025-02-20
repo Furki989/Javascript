@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Schere Stein Papier</title>
+        <link rel="stylesheet" href="rockpaper.css">
+    </head>
+    <body>
+        <div>
+
+            <p> Schere Stein Papier</p>
+
+            <button onclick="
+
+            playGame('Schere');
+
+
+            "> Schere </button>
+
+
+            <button onclick="
+
+            playGame('Stein');
+
+
+            "> Stein </button>
+
+
+            <button onclick="
+        
+            playGame('Papier');
+
+
+            ">
+            
+            Papier </button>
+
+
+            <p class="js-result"></p>
+
+            <p class="js-moves"> </p>
+
+            <p class="js-score"> </p>
+
+
+            <button onclick="
+
+            setZero();
+            
+            "> Reset </button>
+
+
+        </div>
+
+        <script src="rockpaper.js"></script>
+    </body>
+</html>
