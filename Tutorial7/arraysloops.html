@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Array and Loops</title>
+    </head>
+    <body>
+
+
+
+        <script>
+
+           const myArray = [10, 20, 30];                // Array erstellen
+           console.log(myArray);
+
+           console.log(myArray[0]);                     // bestimmte Position im Array ausgeben 0 = erste variable im Array
+           myArray[0] = 99;                             // ändern einer variable im Array
+
+           console.log(myArray[0]);
+
+           const arraytest = [1, 'hello', true, {name: 'socks'}];   // man kann alles abspeichern in arrays sogar objects 
+
+           console.log(arraytest[3]);
+
+           console.log(arraytest.length);           // wieviele values das array hat 
+
+           arraytest.push(100);                     // fügt am ende des Arrays eine variable hinzu
+
+           console.log(arraytest);
+
+           arraytest.splice(0, 1);                  // entfernt variable aus dem array, von .. bis 
+           console.log(arraytest);
+
+
+           let i = 1;
+
+           while (i <= 5) {                         // läuft so oft bis i höher als 5 ist // while-loop
+
+            console.log(i);
+            i = i + 1;
+           }
+
+           for(let i = 1; i <=5; i++) {
+            
+            console.log(i);
+
+           }
+
+
+           let randomNumber = 0;
+
+           while(randomNumber < 0.90) {              // while bei non standard loops verwenden beispiel: eine zufallszahl solange generieren lassen bis die Zahl über 0.9 ist 
+            randomNumber = Math.random();
+            console.log(randomNumber);
+
+           }
+
+
+           
+
+
+
+
+           
+
+
+
+
+        </script>
+    </body>
+</html>
