@@ -30,11 +30,13 @@
 
             function hinzufugen (){
 
-                const hinzu = document.querySelector('.eingabe');
+                let hinzu = document.querySelector('.eingabe');
                 const name = hinzu.value;
 
                 TodoList.push(name);
                 console.log(TodoList);
+
+                hinzu.value = '';                                       // macht das Feld wieder leer 
 
             }
 
