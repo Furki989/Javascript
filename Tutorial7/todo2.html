@@ -20,6 +20,9 @@
         
         ">Add</button> 
 
+        <div class="divers"></div>
+
+        
 
 
         <script>
@@ -27,7 +30,24 @@
             
 
 
-            const TodoList = [];
+            const TodoList = ['washes', 'tv looking'];
+
+            let TodoListHTML = '';
+
+            for(let i = 0; i < TodoList.length; i++) {
+
+                const todo = TodoList[i];
+                const html = `<p>${todo}</p>`;                                  // erstellt ein p wo die varibale todo abgespeichert wird
+                TodoListHTML += html;
+            }
+
+            console.log(TodoListHTML);
+            document.querySelector('.divers').innerHTML = TodoListHTML;             // muss div sein weil ein p kann nicht innerhalb eines p abgespeichert werden
+
+
+
+
+
 
             function hinzufugen (){
 
