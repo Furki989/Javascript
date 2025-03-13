@@ -103,6 +103,63 @@
            console.log(numsdouble2);
 
 
+           const array10 = [1,2,3];
+
+           const array2 = array10;         // beinhaltet nicht das selbe, sondern nur die selbe reference wie bei Objekten
+
+           console.log(array10)
+
+           const array20 = array10.slice();     // mit .slice übernimmt er den imnhalt vom anderen array und kopiert den rein 
+
+           const [erste, zweite] = [1, 2];  // speichert direkt die werte aus dem array in variablen mit dem angegeben namen 
+
+
+           for(let i = 0; i <= 10; i++) {
+
+            if( i === 3) {
+                continue;                   // ignoriert wenn i = 3 ist überspringt die 3 
+            }
+
+            if (i % 3 === 0){               // alle zahlen die durch 3 sind und am ende 0 übrig bleibt werden ignoriert übersprungen
+                continue;
+            }
+
+            console.log(i);
+            if(i === 8) {
+                break;                      // hört auf sobald i = 8 ist mit break
+            }
+           }
+
+
+
+           let u = 0;
+
+           while(u <= 10) {
+
+            if(u % 3 === 0) {
+                u++;                    // muss hinzufgefügt werden sonst unendlich lang
+                continue;
+            }
+
+            console.log(u);
+            u++;
+           }
+
+
+
+
+
+
+          
+
+           
+
+
+
+
+
+
+
 
            
 
