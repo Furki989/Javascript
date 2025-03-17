@@ -11,8 +11,50 @@
     <script>
 
 
+        function display(kaka) {
+            console.log(kaka)
+        }
 
 
+        display(2);
+
+        function run(kaka) {
+            kaka();
+
+        }
+
+        run(function() { 
+            console.log('hgello3');             // kaka von der function run der Parameter wird zu einer eigenen funciton und kann ausgegeben werden, CALLBACK wird das genannt
+
+        });
+
+
+        setTimeout(function(){
+            console.log('timeout');
+        }, 3000 );                           // lässt eine function in zukunft ausführen, als erstes die Function eingeben, der zweite wert wann, ist in milisekunden 1000 = 1sekunde , Asynchronous Code, wartet nicht sonder fängt weiter mit den zeilen an gegenteil Synchronous Code, wartet bis die Zeile ausgeführt ist um dann auf die nächste zugehen
+
+
+        console.log('next line');
+
+
+        setInterval(function(){
+            console.log('interval');
+        }, 3000 );                          // lässt eine function alle 3 sekunden durchlaufen 
+
+        console.log('nextline');
+
+
+        [' make dinner', 'wash dishes', 'watch Youtube'].forEach(function(value, index) {              // erste stelle des Arrays wird im parameter abgespeichert, führt die function aus, danach der zweite und dritte, forEach ist das selbe wie eine forschleife um ein array auszugeben
+           if (value === 'wash dishes') {
+            return;                                                                                     // wash dishes übersrpungen sowie continue, break gibts nicht für foreach dann sollte man lieber einene regulären for loop nutzen
+           }
+            console.log(index);
+            console.log(value);
+        });
+
+
+
+        
 
 
 

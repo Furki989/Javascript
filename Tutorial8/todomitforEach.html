@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Array and Loops</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+
+        <p>Todo List Pratice 2</p>
+
+        <div class="test">
+
+            <input placeholder="Todo Name" class="eingabe">
+            <input type="date" class="eingabe2">
+
+            <button onclick="
+
+
+
+            hinzufugen()
+            
+            
+            
+            
+            ">Add</button> 
+
+            <div class="divers divers2"></div>
+
+
+
+
+        </div>
+
+       
+
+
+
+        <script>
+            const TodoList = [{
+
+                name: 'washes',
+                dueDate: '2022-12-22'
+
+
+            }, {
+
+                name: 'watch TV',
+                dueDate: '2022-12-23'
+
+
+
+            }];
+
+
+            rendertodolist();                                      // gibt direkt beim starten die Liste an
+            
+
+
+
+            
+
+            function rendertodolist() {
+
+                let TodoListHTML = '';
+
+                TodoList.forEach(function(todo, index) {
+
+                    
+                    const name = todo.name;                   
+                    const date = todo.dueDate;
+
+                    const html = `
+                    <div> ${name} </div>
+                    <div> ${date} </div>
+                    <button onClick=" TodoList.splice(${index}, 1);       rendertodolist();      "> Löschen </button> </p> `;                           
+                    TodoListHTML += html;
+
+
+                });
+
+             
+
+
+                document.querySelector('.divers').innerHTML = TodoListHTML; 
+
+
+            }
+
+         
+
+
+
+            function hinzufugen (){
+
+
+                const hinzu = document.querySelector('.eingabe');
+                const name = hinzu.value;
+
+                const dateInput = document.querySelector('.eingabe2');
+                const date = dateInput.value;
+
+                TodoList.push({                                   //fügt die beiden werte dem object array hinzu
+
+
+                    name: name,
+                    dueDate: date
+
+                });
+                
+
+                hinzu.value = '';                                       
+                rendertodolist();
+            }
+
+
+
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Advanced Functions3</title>
+</head>
+
+<body>
+
+    <button onclick="" class="testi"> test </button>
+
+
+    <script>
+        const button1 = document.querySelector('.testi');
+
+        const eventlistener = () => { 
+            console.log('Hello');
+         };
+
+        button1.addEventListener('click', eventlistener);                      // das gleiche wie onclick, man kann mehrere eventlistener hinzufügen 
+
+        button1.addEventListener('click', () => {                       // hat 2 parameter, zuerst click (event) und danach die function die ausgeführt werden soll
+
+            console.log('Hello2');
+        });
+        
+        button1.removeEventListener('click', eventlistener);                // entfernt das erste event 
+
+
+        [1, 2, -3, 4].filter((value, index) => {                                //.filter macht einen neuen Array, filter alle die negativ sind raus 
+
+           /* if (value >= 0) {
+                return true;
+            } else {
+                return false;
+            } */
+
+            return value >= 0;   // macht das gleiche wie if abfrage
+        });
+
+
+        [1, 2, 3].map((value, index) => {
+
+        return value * 2;
+
+        });
+
+        console.log([1, 2, 3].map((value, index) => {
+
+           return value * 2;
+
+        })); 
+
+
+        console.log([1, 2, 3].map(value => value * 2)); // das gleiche wie oben
+
+
+
+
+
+
+
+        
+
+       
+
+
+      
+
+
+
+
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>
