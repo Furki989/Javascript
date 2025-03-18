@@ -30,11 +30,46 @@
         console.log('3 Stück wurden hinzugefügt: ' + KarteVoll);
         "> +3 </button>
 
+        <button onclick="
+
+        KarteVoll += 4;
+        console.log('4 Stück wurden hinzugefügt: ' + KarteVoll);
+        ">+4</button>
+
+        <button onclick="
+
+        KarteVoll = KarteVoll + 5;
+        console.log('5 Stück wurden hinzugefügt: ' + KarteVoll);
+        
+        
+        ">+5</button>
+
 
         <button onclick="
         KarteVoll = 0;
         console.log('Alls entfernt, aktueller Stand: ' + KarteVoll);
         "> Reset </button>
+
+        <button onclick="
+
+        KarteVoll--;
+        console.log('Es wurde einer entfernt: ' + KarteVoll);
+        "> Remove from cart</button>
+
+        <button onclick="
+        KarteVoll -= 2;
+        console.log('Es wurden zwei entfernt: ' + KarteVoll);
+        ">-2</button>
+
+        <button onclick="
+
+        KarteVoll = KarteVoll - 3;
+        console.log('Es wurden drei entfernt: ' + KarteVoll);
+
+
+        ">-3</button>
+
+
 
 
         <script>
