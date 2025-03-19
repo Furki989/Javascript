@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Uebung7 </title>
+    </head>
+
+    <body>
+
+      
+
+        <script>
+            function greet(name){
+
+                if(!name) {
+                    name = 'Hi there!';
+                    console.log('Hello! ' + name);
+                } else {
+                    console.log('Hello! ' + name);
+
+                }
+            }
+
+            greet('Furki');
+            greet('TÜRKIYE');
+            greet();
+            greet();
+
+            function convertToFahrenheit(Celcius) {
+
+                let Fahrenheit = (Celcius * 9 / 5) + 32;
+                console.log(Fahrenheit);
+
+            }
+
+            convertToFahrenheit(25);
+
+            function convertToCelsius(fahrenheit) {
+                let Celcius = (fahrenheit - 32) * 5 / 9;
+                console.log(Celcius);
+            }
+
+            convertToCelsius(86);
+
+            function convertTemperature(degrees, unit) {
+                
+            }
+
+    
+        </script>
+
+    </body>
+</html>
