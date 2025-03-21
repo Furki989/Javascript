@@ -5,16 +5,78 @@
     </head>
 
     <body>
+        <div>
 
-        <button>9a </button>
-        <button>9b</button>
+            <button>9a </button>
+        <button class="button33">9b</button>
+
+
+
+        </div>
+
+
+        <div>
+
+            <button class="head" onclick="
+                pipi.innerHTML = 'You chose: head';
+            ">heads</button>
+
+            <button class="tail" onclick="
+                pipi.innerHTML = 'You chose: tail';
+            ">tails</button>
+
+
+
+            <p class="text1"></p>
+        </div>
+
+
+        <div>
+
+            <input class='ma' placeholder="Name" onkeydown="
+
+            if(event.key === 'Enter') {
+              rechnen()
+             }" > 
+            <button class="Sub"
+            
+            
+            
+            onclick="
+
+              rechnen();
+            
+            
+            
+            ">Submit</button>
+
+            <p class="text2"></p>
+
+
+        </div>
+      
 
    
 
         <script>
 
+            function rechnen() {
+
+                
+                let test = document.querySelector('.ma').value;
+                document.querySelector('.text2').innerHTML = test;
+            }
+
+            let pipi = document.querySelector('.text1');
+
             const pi = document.querySelector('button');
             console.log(pi);
+
+            document.querySelector('.button33').innerHTML = '9b done!';
+
+
+
+
 
        
 
