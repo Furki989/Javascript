@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Uebung8Coin </title>
+    </head>
+
+    <body>
+
+        <button onclick="
+
+        playgame('heads');
+        
+            
+            ">heads</button>
+        <button onclick="
+        
+        playgame('tails');
+        
+        
+        "> tails</button>
+
+        
+
+      
+
+        <script>
+
+            let result = '';
+
+            let score = JSON.parse(localStorage.getItem('score')) || {
+                win: 0,
+                lose: 0
+            };
+
+
+            function playgame(parameter1) {
+
+                const randomNum = Math.random();
+
+                if(parameter1 === 'heads') {
+
+                    if(randomNum < 0.5) {
+                        result = 'heads';
+                    } else {
+                        result = 'tails'
+                    }
+                } else if (parameter1 === 'tails') {
+
+                    if(randomNum < 0.5) {
+                        result = 'heads';
+                    } else {
+                        result = 'tails';
+                    }
+                }
+
+                if(result === parameter1) {
+                    console.log('You Win');
+                    score.win = score.win + 1;
+                } else {
+                    console.log( 'You Lose loser');
+                    score.lose = score.lose + 1;
+                }
+
+                console.log(score);
+
+                localStorage.setItem('score', JSON.stringify(score));
+                
+                
+
+            }
+
+
+
+
+        </script>
+
+    </body>
+</html>

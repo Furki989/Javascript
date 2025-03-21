@@ -6,7 +6,87 @@
 
     <body>
         <script>
+
+            product1 = {
+                name: 'basketball',
+                price: 2095,
+                ['delivery-time']: '3 Days'
+            };
+
+            product2 = {
+                name: 'Balli',
+                price: 3000
+            };
+
+            console.log(product1.name);
             
+            product1.price =  product1.price + 500;
+            
+            console.log(product1.price);
+
+            console.log(product1['delivery-time']);
+
+            comparePrice(product1, product2);
+
+
+                    function comparePrice(product1, product2) {
+
+
+
+                        if (product1.price > product2.price){
+                            const name = product1.name;
+                            const preis = product1.price;
+                            console.log('Das Produkt ' + name + ' kostet mehr mit einem Preis von: ' + preis  + '.' );
+
+                        } else if (product1.price < product2.price) {
+                            const name = product2.name;
+                            const preis = product2.price;
+                            console.log('Das Produkt ' + name + ' kostet mehr mit einem Preis von: ' + preis  + '.' );
+                        }
+                    }
+
+
+
+
+
+
+                function isSameProduct(value1, value2) {
+                    if (value1.price === value2.price && value1.name === value2.name) {
+                        console.log(bingo);
+                        return true;
+                    } else {
+                        console.log('no');
+                        return false;
+                    }
+                }
+
+
+
+                const mama = isSameProduct(product1, product2);
+                console.log(mama);
+
+                console.log('MAMA'.toLowerCase());
+
+                console.log('hello'.repeat(2))
+
+
+
+
+
+                
+
+
+
+
+
+
+
+           
+
+            
+
+            
+
             
 
 
