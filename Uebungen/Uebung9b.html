@@ -1,21 +1,68 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title> Uebung9b </title>
+        <title> DomUebung </title>
     </head>
-
     <body>
-       
 
-   
+
+
+        <p> Amazon shipping Calculator</p>
+        <p> Order under $40 = + $10 shipping.</p>
+        <p> Order over $40 = FREE shipping</p>
+
+
+        <input placeholder="eingeben" class="eingabe" onkeydown="
+        
+       enteristgleich();
+        
+        ">
+        <button onclick="
+
+        rechnen();
+        
+        
+        " class="calculate">Calculate</button>
+
+        <p class="ausgabe"></p>
+
 
         <script>
 
-     
-       
+            function enteristgleich()  {
+
+                console.log(event.key);                         // event ist ein object was die tasten beinhaltet ort key etc. mit key sieht man die eingabe taste 
+
+                if(event.key === 'Enter') {
+                    rechnen()
+                }
+
+            }
+            
+
+            function rechnen() {
+
+                let einga = document.querySelector('.eingabe');
+
+                let cost = Number(einga.value) * 100;                        // mit value kriegt man den input aus input typen von html // die values werden automatisch zu strings mit Number() wird es zu einer zahl und man kann diese addieren 
+                   // String(25);                                         // genau das selbe wie Number ändert eine Zahl in ein String
+
+                
+
+                if (cost < 4000) {
+                    cost = cost + 1000;
+                    console.log(cost);
+                } 
+
+                document.querySelector('.ausgabe').innerHTML = '$' + cost / 100;
+
+                
 
 
+            }
+
+
+         
         </script>
-
     </body>
 </html>

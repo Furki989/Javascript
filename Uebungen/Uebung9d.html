@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> test </title>
+    </head>
+
+    <body>
+        <h1> Amazon</h1>
+
+        <button onclick="
+        
+        console.log('Das befindet sich aktuell drinne: ' + KarteVoll);
+        "> show quantity </button>
+
+
+
+        <button onclick="
+
+       updatecartquantity(1);
+        ">Add</button>
+
+
+        <button onclick="
+        updatecartquantity(2);
+        "> +2 </button>
+
+        <button onclick="
+       updatecartquantity(3);
+        
+        "> +3 </button>
+
+        <button onclick="
+        updatecartquantity(4);
+      
+        ">+4</button>
+
+        <button onclick="
+        updatecartquantity(5);
+        ">+5</button>
+
+
+        <button onclick="
+       reset();
+        "> Reset </button>
+
+        <button onclick="
+
+        updatecartincrease(-1);
+        
+        "> Remove from cart</button>
+
+        <button onclick=" 
+
+        updatecartincrease(-2);
+
+        ">-2</button>
+
+        <button onclick="
+
+            updatecartincrease(-3);
+        
+        ">-3</button>
+
+        <p class="display"></p>
+
+
+
+
+        <script>
+            let KarteVoll = 0 
+
+            document.querySelector('.display').innerHTML = 0;
+
+            function updatecartquantity(number) {
+
+                if (KarteVoll + number > 10) {
+                    console.log('Das maximum liegt bei 10');
+                } else if (KarteVoll + number <= 10) {
+                    KarteVoll = KarteVoll + number;
+                    console.log('Dein Einkaufswagen wurden auf: ' + KarteVoll + ' aktualisert.');
+                }
+                document.querySelector('.display').innerHTML  = KarteVoll;
+            }
+
+            function updatecartincrease(number) {
+                if( KarteVoll === 1) {
+                    KarteVoll = KarteVoll - 1;
+                    console.log('Es wurde der letzte entfernt3: ' + KarteVoll);
+
+                } else if (KarteVoll === 2) {
+                    KarteVoll = KarteVoll - 2;
+                    console.log('es wurden die letzten 2 entfernt4: ' + KarteVoll);
+
+                }else if (KarteVoll === 0) {
+                    console.log('Ist schon auf 0');
+                
+                }else{
+                    KarteVoll = KarteVoll + number;
+                    console.log('Es wurden weitere Artikel entfernttest: ' + KarteVoll );
+                }
+
+                document.querySelector('.display').innerHTML  = KarteVoll;
+            }
+
+            function reset() {
+
+                KarteVoll = 0;
+                console.log('Alls entfernt, aktueller Stand: ' + KarteVoll);
+
+                document.querySelector('.display').innerHTML  = KarteVoll;
+
+            }
+       
+        </script>
+
+
+
+
+    </body>
+</html>
