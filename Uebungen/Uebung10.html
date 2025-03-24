@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Uebung10 </title>
+        <link rel="stylesheet" href="Uebung10.css">
+    </head>
+
+    <body>
+
+
+
+        <button class="Button1"> Add to Cart</button>
+
+        <div class="div1">
+            <button class="button2">Request now</button>
+            <button class="button3">Schedule for later</button>
+
+        </div>
+
+
+        <div>
+            <button class="js-button " onclick="
+                add('.js-button');
+            ">hello</button>
+
+            <button class="js-button2" onclick="add('.js-button2');"> hello2</button>
+
+            <button class="js-button3" onclick="add('.js-button3');">hello4</button>
+
+        </div>
+
+       
+        <script>
+            
+
+            function add(parameter1) {
+
+                const button = document.querySelector(parameter1);
+                if(!button.classList.contains('is-toggled')) {
+                    turnoff();
+                    button.classList.add('is-toggled');
+
+                }else {
+                    button.classList.remove('is-toggled');
+                }
+
+           
+            }
+
+            function turnoff() {
+                const previous = document.querySelector('.is-toggled');
+                if(previous) {
+                    previous.classList.remove('is-toggled');
+                }
+            }
+
+
+           
+
+     
+
+           
+
+            
+
+       
+       
+
+        </script>
+    </body>

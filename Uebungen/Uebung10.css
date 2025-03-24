@@ -1,0 +1,51 @@
+.Button1{
+
+    background-color: rgb(255, 216, 20);
+    border-radius: 20px;
+    border-color: transparent;
+    font-size: 15px;
+    padding: 4px 30px;
+
+}
+
+.div1{
+    margin-top: 20px;
+
+}
+
+.button2{
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    border-color: transparent;
+    font-size: 15px;
+    padding: 4px 20px;
+
+
+}
+
+.button3{
+    background-color: rgb(230, 230, 230);
+    color: black;
+    border-radius: 5px;
+    border-color: transparent;
+    font-size:15px;
+    padding: 4px 20px;
+    margin-left:10px;
+}
+
+.js-button, .js-button2, .js-button3{
+    background-color: rgb(230, 230, 230);
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-right: 10px;
+    font-size: 15px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+
+  .is-toggled {
+    background-color: black;
+    color: white;
+  }
