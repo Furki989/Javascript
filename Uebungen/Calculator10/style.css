@@ -1,0 +1,28 @@
+body{
+
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+
+button{
+    background-color: GREY;
+    border-color: transparent;
+    margin: 5px 5px;
+    border-radius: 10px;
+    color: white;
+
+}
+
+.display{
+    color: white;
+
+}
+
+div, .display{
+    background-color: black;
+
+}
+
+

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> DomUebung </title>
+
+
+        <style> 
+
+        .rotmache{
+            color: red;
+        }
+        
+        
+        
+        
+        
+        </style>
+    </head>
+    <body>
+
+
+
+        <p> Amazon shipping Calculator</p>
+        <p> Order under $40 = + $10 shipping.</p>
+        <p> Order over $40 = FREE shipping</p>
+
+
+        <input placeholder="eingeben" class="eingabe" onkeydown="
+        
+       enteristgleich();
+        
+        ">
+        <button onclick="
+
+        rechnen();
+        
+        
+        " class="calculate">Calculate</button>
+
+        <p class="ausgabe"></p>
+
+
+        <script>
+
+            function enteristgleich()  {
+
+                console.log(event.key);                         
+
+                if(event.key === 'Enter') {
+                    rechnen()
+                }
+
+            }
+            
+
+            function rechnen() {
+
+                let einga = document.querySelector('.eingabe');
+
+                let cost = Number(einga.value);                     
+               
+
+                
+
+                if (cost < 40 && cost > 0) {
+                    cost = cost + 10;
+                    console.log(cost);
+                    document.querySelector('.ausgabe').classList.remove('rotmache');
+                    document.querySelector('.ausgabe').innerHTML = '$' + cost;
+                } else if (cost < 0) {
+
+                    document.querySelector('.ausgabe').classList.add('rotmache');
+
+                    document.querySelector('.ausgabe').innerHTML = ' Error: cost cannot be less than 0$'
+
+                }else {
+                    document.querySelector('.ausgabe').classList.remove('rotmache');
+                    document.querySelector('.ausgabe').innerHTML = '$' + cost;
+
+
+                }
+
+
+                
+
+
+            }
+
+
+         
+        </script>
+    </body>
+</html>
