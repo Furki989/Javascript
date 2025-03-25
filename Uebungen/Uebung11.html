@@ -14,14 +14,60 @@
             nums[2] = 99;
             console.log(nums[2]);
 
+            getlastValue([1,20,22,24,5]);
+
 
 
             function getlastValue(parameter) {
 
+                const lastIndex = parameter.length - 1;                     //gibt den letzten wert aus dem array
+                return parameter[lastIndex];
+
                 
 
 
+            };
+            console.log(getlastValue([1,20,22,24,5]));
+            console.log(getlastValue(['hello', 'hi', 'moin']));
+
+
+
+            for(let i = 0; i <= 10; i += 2) {
+                console.log(i);
             }
+
+            for( let i = 5; i >= 0; i --){
+                console.log(i);
+            }
+
+
+            let i = 0;
+
+            while( i <= 10) {
+                
+                console.log(i);
+                i += 2;
+            }
+
+            while (i > 0) {
+
+                i--;
+                console.log(i);
+            }
+
+            
+
+
+            
+            
+
+
+
+
+
+
+
+
 
 
 

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Uebung11g</title>
+
+    </head>
+    <body>
+
+
+
+        <script>
+
+
+            array = [1,2,3];
+            array2 = [];
+
+
+            for(let i = 0; i < array.length; i++) {
+                array2.push(array[i] + 1);
+            }
+
+            console.log(array2);
+
+
+            addOne([-2,-1,0,99]);
+
+
+
+            function addOne(parameter) {
+
+                for(let i = 0; i < parameter.length; i++) {
+                    parameter[i] += 1;
+                }
+
+                console.log(parameter);
+            }
+
+
+            addNum([1,2,3],2 )
+            addNum([-2,-1,0,99], 2)
+
+
+            function addNum(parameter1, parameter2) {
+
+                for(let i = 0; i < parameter1.length; i++ ) {
+                    parameter1[i] += parameter2;
+
+                }
+
+                console.log(parameter1);
+            }
+
+
+            addArrays([1,1,2], [1,1,3])
+
+            function addArrays(parameter1, parameter2) {
+                const array1 = [];
+
+                for(let i = 0; i < parameter1.length; i++) {
+                    array1[i] = parameter1[i] + parameter2[i];
+                    //array1.push(parameter1[i] + parameter2[i]);
+                    
+                }
+                console.log(array1);
+
+
+            }
+
+
+
+
+        
+
+
+         
+        </script>
+    </body>
+</html>
