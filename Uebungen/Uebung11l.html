@@ -36,13 +36,30 @@
             }
             console.log(minMax([3,3,5]));
 
+            
+
 
             function countWords(words) {
-                object4 = {
-                    
+               const object4 = { };
+
+                for(let i = 0; i < words.length; i++){
+                    const word = words[i];
+
+
+                    if(!object4[word]) {
+
+                        object4[word] = 1;
+                        
+                        
+                    } else {
+                        object4[word]++;
+                    }
                 }
+
+                return object4;
             }
 
+            console.log(countWords(['apple', 'grape', 'apple', 'apple']));
 
 
          

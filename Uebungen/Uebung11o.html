@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Uebung11o</title>
+
+    </head>
+    <body>
+
+
+
+        <script>
+
+            const array1 = ['hello', 'world', 'search', 'good', 'search'];
+            let index = -1;
+            const array2 = ['not', 'found'];
+
+
+
+
+
+            function suchen(parameter1, parameter2) {
+
+                for(let i = 0; i < parameter1.length; i++) {
+
+                    if('search' === parameter1[i]) {
+                        parameter2 = i;
+                        break;
+                        
+                    } 
+                    
+                    
+                    
+                }
+                return parameter2;
+            }
+
+
+          
+
+
+            const test2 = suchen(array2, index);
+            const test = suchen(array1, index);
+
+
+            console.log(test2);
+            console.log(test);
+
+
+
+           
+
+                    
+
+
+
+
+
+
+
+
+           
+        </script>
+    </body>
+</html>
