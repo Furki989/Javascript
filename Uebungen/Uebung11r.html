@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Uebung11r</title>
+
+    </head>
+    <body>
+
+
+
+        <script>
+
+
+            const food = ['egg', 'apple', 'egg','egg', 'ham'];
+            let foodNew = [];
+        
+
+
+            function removeEgg(parameter1, parameter2){
+
+                const reversedfood = parameter1.reverse();
+
+                let Eggsremove = 0;
+
+                for(let i = 0; i < reversedfood.length; i++) {
+
+                    if (reversedfood[i] === 'egg' && Eggsremove < 2) {
+                        Eggsremove +=1;
+                        continue;
+                    } else {
+                        parameter2.push(reversedfood[i]);
+                    }
+
+                }
+
+                return parameter2.reverse();
+
+            }
+
+
+            const test = removeEgg(food, foodNew);
+
+            console.log(test);
+
+
+
+            
+
+
+           
+        </script>
+    </body>
+</html>

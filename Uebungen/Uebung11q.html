@@ -11,17 +11,34 @@
         <script>
 
 
-            const array1
+
+            const farbe2 = 'yellow';
+            const array1 = ['green', 'red', 'blue', 'red'];
+            let index = -1;
+            const farbe = 'red';
 
 
             
-            function findIndex(parameter1, parameter2) {
+            function findIndex(parameter1, parameter2, parameter3) {
 
                 for(let i = 0; i < parameter1.length; i++) {
 
+                    if(parameter2 === parameter1[i]) {
+
+                        parameter3 = i;
+                        break;
+                    }
+
 
                 }
+                return parameter3;
             }
+
+            const test = findIndex(array1, farbe, index);
+            const test2 = findIndex(array1, farbe2, index);
+
+            console.log(test, test2);
+
 
            
 
