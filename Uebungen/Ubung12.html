@@ -5,14 +5,40 @@
     </head>
 
     <body>
+
+        <button class="button1" onclick="
+
+            setTimeout(() => {document.querySelector('.button1').innerHTML  = 'finished';
+            
+         }, 1000);
+
+            
+        
+            
+            "> Start </button>
         <script>
             const add = function test() {
                 console.log(2 + 3);
-            } ;
+            };
 
             add();
             add();
-            
+
+
+
+            function RunTwice(paramter1) {
+
+                paramter1();
+                paramter1();
+            }
+
+
+            RunTwice( function() { console.log('12b')});
+
+            RunTwice(add);
+
+       
+
 
          
 
