@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Uebung12m </title>
+    </head>
+
+    <body>
+
+
+
+        
+   
+
+    
+        <script>
+
+            newarray = [];
+
+            function addNum (parameter1, parameter2) {
+                parameter1.map((value) => {
+
+                    value2 = value + parameter2;
+                    newarray.push(value2)
+                });
+                return newarray;
+              };
+
+
+            console.log(addNum([1,2,3], 2));
+
+
+            function addNum2 (parameter1, parameter2) {
+                return parameter1.map((value) => value + parameter2);
+            }
+
+            console.log(addNum2([1,2,3],2))
+
+
+        
+      
+
+        </script>
+
+    </body>
+</html>
